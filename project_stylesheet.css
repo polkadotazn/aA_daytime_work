@@ -1,0 +1,30 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: olive;
+  line-height: 1.25;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 38px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+.ingredients-list {
+  list-style: square outside;
+}
+
+ol {
+  list-style: numbers outside;
+}
+
+header > img {
+  width: 100px;
+}
+
+nav ul {
+  display: inline-block;
+}
