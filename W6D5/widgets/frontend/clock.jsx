@@ -22,10 +22,32 @@ class Clock extends React.Component {
     this.setState({time: new Date()});
   }
 
+  prettifyTime (time) {
+    if (time.toString().length === 1) {
+      return `0${time}`;
+    } else {
+      return time;
+    }
+  }
+
+  toHour (hr) {
+    if (hr > 12) {
+      return hr - 12;
+    } else {
+      return hr;
+    }
+  }
+
   render () {
+
+    let minutes = this.prettifyTime(this.state.time.getMinutes());
+    let seconds = this.prettifyTime(this.state.time.getSeconds());
+    let hour = this.toHour(this.state.time.getHours());
+
     return (
       <div>
         <h1>Clock</h1>
+        {hour}:{minutes}:{seconds}
       </div>
     );
   }
