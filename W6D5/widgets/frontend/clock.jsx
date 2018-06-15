@@ -15,7 +15,7 @@ class Clock extends React.Component {
   }
 
   componentWillUnmount () {
-    clearInterval(this.intervalId);
+    // clearInterval(this.intervalId);
   }
 
   tick () {
@@ -47,7 +47,7 @@ class Clock extends React.Component {
     return (
       <div>
         <h1>Clock</h1>
-        {hour}:{minutes}:{seconds}
+        <d>{hour}:{minutes}<sec>{seconds}</sec></d>
       </div>
     );
   }
