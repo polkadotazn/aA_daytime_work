@@ -39,9 +39,20 @@ payload.each do |location|
   end
 end
 
-p addresses
+# p addresses
 
 # Return all rows with addresses that don't contain a number (return the entire row)
+locations = []
+payload.each do |location|
+  address = location["address"]
+  # p location if !address
+  if address && address.match(/\d/)
+  else
+    locations << location
+  end
+end
+
+# p locations
 # Return the number of records that are museums
 # Return a new object containing uuid, name, website, and email address for all rows that have values for all four of these attributes; exclude any rows that don’t have all four
 # Return all rows, but transform the names to all lower case while changing nothing else
